@@ -31,7 +31,7 @@ class PrototypesController < ApplicationController
   def update
     @prototype.update(prototypes_params)
     if @prototype.update(prototypes_params)
-      redirect_to root_path
+      redirect_to prototype_path(@prototype.id)
     else
       render :edit
     end
